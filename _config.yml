@@ -10,6 +10,9 @@ baseurl: ""
 twitter_username: 
 default_img: 
 
+# Home page settings
+home_img: /assets/img/profile_img.png
+
 # Profile settings
 name: 
 profile_img: /assets/img/profile_img.png
