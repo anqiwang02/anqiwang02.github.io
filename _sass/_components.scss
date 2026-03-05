@@ -61,9 +61,9 @@
     align-items: center;
 
     /* changed */
-    justify-content: flex-end; /* push content down */
-    padding: 2em;             /* keep normal padding */
-    padding-bottom: 15vh;     /* adjust: bigger = higher, smaller = lower */
+    justify-content: center;      /* start from center */
+    transform: translateY(20vh);  /* move down into bottom half */
+    padding: 2em;                 /* normal padding */
 
     height: 100%;
     width: 100%;
