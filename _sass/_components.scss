@@ -61,13 +61,12 @@
     align-items: center;
 
     /* changed */
-    justify-content: flex-start;
+    justify-content: flex-end; /* push content down */
+    padding: 2em;             /* keep normal padding */
+    padding-bottom: 10vh;     /* adjust: bigger = higher, smaller = lower */
 
     height: 100%;
     width: 100%;
-
-    /* changed */
-    padding: 8em 2em 2em 2em; /* top right bottom left */
 
     color: $color-white;
 
