@@ -75,6 +75,13 @@
   }
 }
 
+.previews__description {
+  margin-top: 0.75em;
+  max-width: 40rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
 .preview {
   transition: background-color 0.2s ease-in-out;
   
