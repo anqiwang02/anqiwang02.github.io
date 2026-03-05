@@ -4,8 +4,9 @@ permalink: /:year/:month/:day/:title/
 google_analytics: 
 
 title: Anqi(Anchie) Wang's Website
-description: I am a second-year Statistics PhD student at UC Berkeley, with an interest in machine learning in biomedical applications. 
-In my free time, I am an R&B enthusiast, concert goer, and avid runner! 
+description: |
+  I am a second-year Statistics PhD student at UC Berkeley, with an interest in machine learning in biomedical applications.
+  In my free time, I am an R&B enthusiast, concert goer, and avid runner!
 url: ""
 baseurl: ""
 twitter_username: 
