@@ -55,30 +55,29 @@
  * On the Blog page
  */
 .previews {
-
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    /* changed */
+    justify-content: flex-start;
+
     height: 100%;
     width: 100%;
-    padding: 2em;
+
+    /* changed */
+    padding: 8em 2em 2em; /* top right/left bottom */
 
     color: $color-white;
 
     span {
       @extend %letter-spacing;
-
       font-family: $font-body;
     }
   }
 }
 
-.previews__container {
-  justify-content: flex-start; /* start at top */
-  padding-top: 8em;            /* controls how low */
-}
 
 .previews__description {
   margin-top: 0.75em;
