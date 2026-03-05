@@ -35,6 +35,11 @@ section {
 /**
  * Blog page
  */
+ 
+.previews .preview__img {
+  background-position: center top;
+}
+
 .previews {
 
   @media (max-width: $mq-md) {
