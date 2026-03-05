@@ -60,7 +60,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 6em;   /* increase to move lower */
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -74,6 +73,11 @@
       font-family: $font-body;
     }
   }
+}
+
+.previews__container {
+  justify-content: flex-start; /* start at top */
+  padding-top: 8em;            /* controls how low */
 }
 
 .previews__description {
