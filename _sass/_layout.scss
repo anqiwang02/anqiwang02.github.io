@@ -35,10 +35,6 @@ section {
 /**
  * Blog page
  */
- 
-.previews .preview__img {
-  background-position: center top;
-}
 
 .previews {
 
@@ -78,4 +74,8 @@ section {
       }
     }
   }
+}
+
+.previews .preview__img {
+  background-position: center top;
 }
