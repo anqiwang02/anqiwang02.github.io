@@ -12,7 +12,7 @@ default_img:
 
 # Profile settings
 name: 
-profile_img: /assets/img/profile_img.jpg
+profile_img: /assets/img/profile_img.png
 profile: 
 social:
   github: 
