@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Favorite Albums"
-date: 2016-02-19
+date: 2026-03-20
 categories:
   - Music
 description: A collection of albums that have shaped my taste and stayed with me over the years.
