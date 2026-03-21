@@ -1,0 +1,31 @@
+<div class="tab">
+  <div class="overview">
+    <div class="overview__content">
+      {% if site.profile_img %}
+        <div class="overview__img">
+          <figure class="absolute-bg" style="background-image: url('{{ site.profile_img | prepend: site.baseurl }}');"></figure>
+        </div>
+      {% endif %}
+      <div class="overview__text">
+        <h2 class="overview__title">About Me</h2>
+        <div class="overview__description">
+          {{ site.description }}
+        </div>
+        {% if site.email or site.social %}
+          <div class="overview__contact">
+            {% if site.email %}
+              <a class="fa fa-lg fa-envelope-o" href="mailto:{{ site.email }}" aria-label="Email"></a>
+            {% endif %}
+            {% for social in site.social %}
+              {% if social[1] %}
+                <a class="fa fa-lg fa-{{ social[0] }}" href="{{ social[1] }}" target="_blank" rel="noopener" aria-label="{{ social[0] }}"></a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% include archive-link.html %}
+</div>

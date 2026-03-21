@@ -141,6 +141,100 @@
 }
 
 /**
+ * Overview Tab
+ * About me section on the blog page
+ */
+.overview {
+  padding: 2em 1em;
+
+  @media (min-width: $mq-md) {
+    padding: 4em 8em;
+  }
+
+  @media (min-width: $mq-xxl) {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    @media (min-width: $mq-md) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2em;
+      max-width: none;
+    }
+  }
+
+  &__img {
+    position: relative;
+    flex-shrink: 0;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $color-black;
+    margin-bottom: 1.5em;
+
+    @media (min-width: $mq-md) {
+      width: 12em;
+      height: 12em;
+      margin-bottom: 0;
+    }
+
+    .absolute-bg {
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    text-align: center;
+
+    @media (min-width: $mq-md) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: $color-alpha;
+    margin-bottom: 0.75em;
+  }
+
+  &__description {
+    color: $color-black;
+    font-family: $font-post;
+    line-height: 1.7;
+    white-space: pre-line;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.5em;
+
+    @media (min-width: $mq-md) {
+      justify-content: flex-start;
+    }
+
+    a {
+      color: $color-black;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $color-alpha;
+      }
+    }
+  }
+}
+
+/**
  * Category Card
  * On the blog page under category tab
  */
