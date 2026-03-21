@@ -22,6 +22,17 @@ profile:
 social:
   github: 
 
+# Experiences (for About me page)
+experiences:
+  - title: "Statistics PhD Student"
+    organization: "UC Berkeley"
+    period: "2023 – Present"
+    description: "Research in machine learning methods for biomedical discovery."
+  - title: "Graduate Student Instructor"
+    organization: "UC Berkeley"
+    period: "2024 – Present"
+    description: "Teaching statistics and data science courses." 
+
 # Build settings
 markdown: kramdown
 plugins:

@@ -232,6 +232,78 @@
       }
     }
   }
+
+  &__experiences {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid $color-grey;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $mq-md) {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__experiences-title {
+    color: $color-alpha;
+    margin-bottom: 1.25em;
+  }
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item {
+  padding: 1.25em 0;
+  border-bottom: 1px solid $color-grey;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+
+  &__title {
+    font-family: $font-header;
+    font-weight: 600;
+    color: $color-alpha;
+    font-size: 1.1em;
+  }
+
+  &__period {
+    font-family: $font-body;
+    font-size: 0.9em;
+    color: $color-black;
+    opacity: 0.8;
+  }
+
+  &__org {
+    font-family: $font-body;
+    color: $color-black;
+    margin-top: 0.25em;
+    font-size: 0.95em;
+  }
+
+  &__desc {
+    font-family: $font-post;
+    color: $color-black;
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
 }
 
 /**

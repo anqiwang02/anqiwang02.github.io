@@ -19,10 +19,12 @@ layout: default
   <div>
     <header>
       <ul class="tabs">
-        <li class="tabs__item">{{ page.title }}</li>
         <li class="tabs__item">About me</li>
+        <li class="tabs__item">{{ page.title }}</li>
       </ul>
     </header>
+
+    {% include overview-tab.html %}
 
     <div class="tab">
       <ul itemscope itemtype="http://schema.org/Blog">
@@ -45,8 +47,6 @@ layout: default
       {% include archive-link.html %}
       
     </div>
-
-    {% include overview-tab.html %}
 
   </div>
 </section>
