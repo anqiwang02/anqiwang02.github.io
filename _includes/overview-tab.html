@@ -26,11 +26,31 @@
       </div>
     </div>
 
-    {% if site.experiences and site.experiences.size > 0 %}
+    {% if site.research_experience and site.research_experience.size > 0 %}
       <div class="overview__experiences">
-        <h3 class="overview__experiences-title">Experience</h3>
+        <h3 class="overview__experiences-title">Research Experience</h3>
         <ul class="experience-list">
-          {% for exp in site.experiences %}
+          {% for exp in site.research_experience %}
+            <li class="experience-item">
+              <div class="experience-item__header">
+                <span class="experience-item__title">{{ exp.title }}</span>
+                <span class="experience-item__period">{{ exp.period }}</span>
+              </div>
+              <div class="experience-item__org">{{ exp.organization }}</div>
+              {% if exp.description %}
+                <p class="experience-item__desc">{{ exp.description }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if site.teaching_experience and site.teaching_experience.size > 0 %}
+      <div class="overview__experiences">
+        <h3 class="overview__experiences-title">Teaching Experience</h3>
+        <ul class="experience-list">
+          {% for exp in site.teaching_experience %}
             <li class="experience-item">
               <div class="experience-item__header">
                 <span class="experience-item__title">{{ exp.title }}</span>

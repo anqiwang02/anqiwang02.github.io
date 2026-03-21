@@ -23,11 +23,13 @@ social:
   github: 
 
 # Experiences (for About me page)
-experiences:
+research_experience:
   - title: "Statistics PhD Student"
     organization: "UC Berkeley"
-    period: "2023 – Present"
+    period: "2024 – Present"
     description: "Research in machine learning methods for biomedical discovery."
+
+teaching_experience:
   - title: "Graduate Student Instructor"
     organization: "UC Berkeley"
     period: "2024 – Present"
