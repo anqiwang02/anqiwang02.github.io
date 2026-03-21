@@ -60,6 +60,7 @@ var Preview = (function() {
 
     init: function() {
       s = this.settings;
+      if (s.img.length === 0) return;
       this.display();
       this.mouseenter();
     },
@@ -73,7 +74,7 @@ var Preview = (function() {
     },
 
     mouseenter: function() {
-      if (s.post.length) {
+      if (s.post.length && s.img.length) {
         var currentIdx = 0,
             prevIdx = currentIdx;
 
@@ -82,7 +83,7 @@ var Preview = (function() {
             prevIdx = currentIdx;
             currentIdx = idx;
 
-            if (prevIdx !== currentIdx) {
+            if (prevIdx !== currentIdx && s.img[prevIdx] && s.img[currentIdx]) {
               s.img[prevIdx].style.display = 'none';
               s.img[currentIdx].style.display = 'block';
             }

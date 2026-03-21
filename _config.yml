@@ -32,8 +32,8 @@ research_experience:
 teaching_experience:
   - title: "Graduate Student Instructor"
     organization: "UC Berkeley"
-    period: "2024 – Present"
-    description: "Teaching statistics and data science courses." 
+    period: "Spring 2026"
+    description: "Stat 214 (Data Analysis and Machine Learning)" 
 
 # Build settings
 markdown: kramdown
