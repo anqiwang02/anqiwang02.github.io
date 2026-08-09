@@ -2,8 +2,26 @@
   <div class="overview">
     <div class="overview__content">
       {% if site.profile_img %}
-        <div class="overview__img">
-          <figure class="absolute-bg" style="background-image: url('{{ site.profile_img | prepend: site.baseurl }}');"></figure>
+        <div class="overview__photo">
+          <div class="overview__img">
+            <figure class="absolute-bg" style="background-image: url('{{ site.profile_img | prepend: site.baseurl }}');"></figure>
+          </div>
+          {% if site.location or site.email or site.linkedin or site.google_scholar %}
+            <ul class="overview__contact">
+              {% if site.location %}
+                <li class="overview__contact-item">📍 {{ site.location }}</li>
+              {% endif %}
+              {% if site.email %}
+                <li class="overview__contact-item"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              {% endif %}
+              {% if site.linkedin %}
+                <li class="overview__contact-item"><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+              {% endif %}
+              {% if site.google_scholar %}
+                <li class="overview__contact-item"><a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+              {% endif %}
+            </ul>
+          {% endif %}
         </div>
       {% endif %}
       <div class="overview__text">
@@ -11,20 +29,28 @@
         <div class="overview__description">
           {{ site.description }}
         </div>
-        {% if site.email or site.social %}
-          <div class="overview__contact">
-            {% if site.email %}
-              <a class="fa fa-lg fa-envelope-o" href="mailto:{{ site.email }}" aria-label="Email"></a>
-            {% endif %}
-            {% for social in site.social %}
-              {% if social[1] %}
-                <a class="fa fa-lg fa-{{ social[0] }}" href="{{ social[1] }}" target="_blank" rel="noopener" aria-label="{{ social[0] }}"></a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
       </div>
     </div>
+
+    {% if site.education and site.education.size > 0 %}
+      <div class="overview__experiences">
+        <h3 class="overview__experiences-title">Education</h3>
+        <ul class="experience-list">
+          {% for edu in site.education %}
+            <li class="experience-item">
+              <div class="experience-item__header">
+                <span class="experience-item__title">{{ edu.title | replace: "summa cum laude", "<em>summa cum laude</em>" }}</span>
+                <span class="experience-item__period">{{ edu.period }}</span>
+              </div>
+              <div class="experience-item__org">{{ edu.organization }}</div>
+              {% if edu.description %}
+                <p class="experience-item__desc">{{ edu.description | newline_to_br }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
 
     {% if site.research_experience and site.research_experience.size > 0 %}
       <div class="overview__experiences">
@@ -38,7 +64,7 @@
               </div>
               <div class="experience-item__org">{{ exp.organization }}</div>
               {% if exp.description %}
-                <p class="experience-item__desc">{{ exp.description }}</p>
+                <p class="experience-item__desc">{{ exp.description | newline_to_br }}</p>
               {% endif %}
             </li>
           {% endfor %}
@@ -53,10 +79,11 @@
           {% for pub in site.publications %}
             <li class="publication-item">
               <p class="publication-item__citation">
-                <span class="publication-item__authors">{{ pub.authors }}</span>{% if pub.year %} ({{ pub.year }}).{% endif %}
-                {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}.
+                <span class="publication-item__authors">{{ pub.authors | replace: "Wang, A.", "<strong>Wang, A.</strong>" }}</span>{% if pub.year %} ({{ pub.year }}).{% endif %}
+                {{ pub.title }}.
                 {% if pub.venue %}<span class="publication-item__venue">{{ pub.venue }}</span>.{% endif %}
                 {% if pub.status %}<span class="publication-item__status">[{{ pub.status }}]</span>{% endif %}
+                {% if pub.link %}<a class="publication-item__link" href="{{ pub.link }}" target="_blank" rel="noopener">[link]</a>{% endif %}
               </p>
             </li>
           {% endfor %}
@@ -76,7 +103,7 @@
               </div>
               <div class="experience-item__org">{{ exp.organization }}</div>
               {% if exp.description %}
-                <p class="experience-item__desc">{{ exp.description }}</p>
+                <p class="experience-item__desc">{{ exp.description | newline_to_br }}</p>
               {% endif %}
             </li>
           {% endfor %}

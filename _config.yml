@@ -16,18 +16,38 @@ default_img:
 home_img: /assets/img/profile_img.png
 
 # Profile settings
-name: 
+name:
 profile_img: /assets/img/profile_img.png
-profile: 
+profile:
+location: "Berkeley, CA"
+linkedin: https://www.linkedin.com/in/anqi-wang07/
+google_scholar: https://scholar.google.com/citations?user=ItZR6x0AAAAJ&hl=en
 social:
-  github: 
+  github:
 
 # Experiences (for About me page)
+education:
+  - title: "Ph.D. in Statistics"
+    organization: "University of California, Berkeley"
+    period: "Expected May 2029"
+  - title: "B.S. in Statistics; B.S. in Biochemistry & Molecular Biology, summa cum laude"
+    organization: "Penn State, Schreyer Honors College"
+    period: "May 2024"
+    description: |-
+      Honors thesis: Understanding the Role of Envelope Protein of Tick-borne Flaviviruses in Vector Specificity.
+      Student Marshal, Eberly College of Science; Goldwater Scholarship nominee.
+
 research_experience:
-  - title: "Statistics PhD Student"
-    organization: "UC Berkeley"
-    period: "2024 – Present"
-    description: "Research in machine learning methods for biomedical discovery."
+  - title: "Graduate Student Researcher, Applied ML and AI"
+    organization: "UC Berkeley Department of Statistics — Advised by Bin Yu"
+    period: "Jun 2025 – Present"
+    description: |-
+      – Developing ML methods for genetic epistasis discovery.
+      – Investigating AI safety by analyzing the internal representation geometry and concept separability of large language models.
+  - title: "Graduate Student Researcher, Causal Inference"
+    organization: "UC Berkeley Department of Statistics — Advised by Sam Pimentel"
+    period: "May 2026 – Present"
+    description: "– Developing asymptotic theory for observational studies under covariate balance constraints."
 
 teaching_experience:
   - title: "Graduate Student Instructor"
@@ -45,10 +65,12 @@ publications:
     year: "2025"
     title: "Comparing uniLasso and Lasso: New Data Sets and New Metrics"
     venue: "Harvard Data Science Review, 7(3)"
+    link: https://hdsr.mitpress.mit.edu/pub/mkd4x6x3/release/3
   - authors: "Das, S., Narayanan, A., Wang, A., et al."
     year: "2025"
     title: "Atomic-resolution structure of a chimeric Powassan tick-borne flavivirus"
     venue: "Science Advances, 11(28)"
+    link: https://www.science.org/doi/10.1126/sciadv.adw7700
   - authors: "Wang, A., Ward-Caviness, C., Devlin, R., & Bind, M."
     title: "Estimated effects of short-term controlled ozone exposure on DNA methylation of genes related to lung function"
     venue: "Environmental Epigenetics"
