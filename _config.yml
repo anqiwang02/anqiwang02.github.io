@@ -5,7 +5,7 @@ google_analytics:
 
 title: Anqi(Anchie) Wang's Website
 description: |
-  My name is Anqi (pronounced "ahn-chee") Wang. I am a second-year Statistics PhD student at UC Berkeley with a research interest in 1) developing machine learning methods for biomedical discovery and 2) causal inference. 
+  My name is Anqi (pronounced "ahn-chee") Wang. I am a third-year Statistics PhD student at UC Berkeley with a research interest in 1) developing machine learning methods for biomedical discovery and 2) causal inference. 
   I believe in finding a good rhythm—whether it's in a complex dataset, a classic R&B track, or my favorite running route around the Bay.
 url: "https://anqiwang02.github.io"
 baseurl: ""
@@ -33,7 +33,29 @@ teaching_experience:
   - title: "Graduate Student Instructor"
     organization: "UC Berkeley"
     period: "Spring 2026"
-    description: "Stat 214 (Data Analysis and Machine Learning)" 
+    description: "Stat 214 (MA applied statistics & ML)"
+  - title: "Graduate Student Instructor"
+    organization: "UC Berkeley"
+    period: "Fall 2026"
+    description: "Stat 215A (PhD applied statistics & ML)"
+
+# Publications & Manuscripts (for About me page)
+publications:
+  - authors: "Wang, A., & Yu, B."
+    year: "2025"
+    title: "Comparing uniLasso and Lasso: New Data Sets and New Metrics"
+    venue: "Harvard Data Science Review, 7(3)"
+  - authors: "Das, S., Narayanan, A., Wang, A., et al."
+    year: "2025"
+    title: "Atomic-resolution structure of a chimeric Powassan tick-borne flavivirus"
+    venue: "Science Advances, 11(28)"
+  - authors: "Wang, A., Ward-Caviness, C., Devlin, R., & Bind, M."
+    title: "Estimated effects of short-term controlled ozone exposure on DNA methylation of genes related to lung function"
+    venue: "Environmental Epigenetics"
+    status: "under review"
+  - authors: "Ronen, O., Ye, C., Wang, A., Ashley, E., & Yu, B."
+    title: "Next Generation Epistasis Discovery via the PCS Framework"
+    status: "in preparation"
 
 # Build settings
 markdown: kramdown

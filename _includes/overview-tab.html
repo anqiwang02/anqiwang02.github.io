@@ -46,6 +46,24 @@
       </div>
     {% endif %}
 
+    {% if site.publications and site.publications.size > 0 %}
+      <div class="overview__experiences">
+        <h3 class="overview__experiences-title">Publications &amp; Manuscripts</h3>
+        <ul class="publication-list">
+          {% for pub in site.publications %}
+            <li class="publication-item">
+              <p class="publication-item__citation">
+                <span class="publication-item__authors">{{ pub.authors }}</span>{% if pub.year %} ({{ pub.year }}).{% endif %}
+                {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}.
+                {% if pub.venue %}<span class="publication-item__venue">{{ pub.venue }}</span>.{% endif %}
+                {% if pub.status %}<span class="publication-item__status">[{{ pub.status }}]</span>{% endif %}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
     {% if site.teaching_experience and site.teaching_experience.size > 0 %}
       <div class="overview__experiences">
         <h3 class="overview__experiences-title">Teaching Experience</h3>
